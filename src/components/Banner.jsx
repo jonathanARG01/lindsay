@@ -8,10 +8,10 @@ const Banner = ({ img, title, description, button }) => {
                 <div className="container d-flex flex-column justify-content-center h-100">
                     <h4> { title } </h4>
                     <p> { description } </p>
-                    <button>
+                    <a href="#contactanos">
                         { button }
                         <img src="flecha1.svg" alt="flecha" />
-                    </button>
+                    </a>
                 </div>
             </div>
             

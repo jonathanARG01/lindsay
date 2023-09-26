@@ -12,8 +12,10 @@ const Menu = () => {
             
                 <Container>
             
-                    <Navbar.Brand href="#home">
-                        <img src="logo.svg" alt="Lindsay" />
+                    <Navbar.Brand>
+                        <a href="#home">
+                            <img src="logo.svg" alt="Lindsay" />
+                        </a>
                     </Navbar.Brand>
 
                     <img src="morison.svg" alt="Morison" />

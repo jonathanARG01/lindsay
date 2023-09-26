@@ -118,7 +118,10 @@ h2 span {
 /*========== BANNERS ==========*/
 .banners {
     height: calc(100vh - 90px);
-    position: relative;
+    position: sticky;
+    background-color: transparent;
+    top: 90px;
+    z-index: 0;
 }
 .banners .swiper {
     height: 100%;
@@ -147,7 +150,7 @@ h2 span {
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
 }
-.banners .banner-item button {
+.banners .banner-item a {
     background-color: #117AB0;
     color: #fff;
     font-size: 14px;
@@ -159,12 +162,13 @@ h2 span {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
     transition-duration: .3s;
 }
-.banners .banner-item button:hover {
+.banners .banner-item a:hover {
     background-color: #FD8307;
 }
-.banners .banner-item button img {
+.banners .banner-item a img {
     margin-left: 10px;
 }
 .swiper-button-prev,
@@ -221,7 +225,30 @@ h2 span {
     margin-right: 10px;
 }
 .banners .rrss img {
+    height: 20px;
+    filter: brightness(10) saturate(0%);
+    transition-duration: .3s;
+}
+.banners .rrss a {
     height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .3s;
+}
+.banners .rrss a:hover img {
+    filter: inherit;
+}
+.banners .rrss a:hover {
+    background-color: #fff;
+    border-radius: 100%;
+}
+@media (min-width: 769px) {
+    .banners .swiper-button-prev,
+    .banners .swiper-button-next {
+        display: flex;
+    }
 }
 @media (max-width: 768px) {
     .banners {
@@ -234,6 +261,9 @@ h2 span {
     .banners .swiper-button-next {
         display: none;
     }
+    .banners .rrss {
+        display: none;
+    }
 }
 
 
@@ -242,7 +272,10 @@ h2 span {
 
 /*========== SERVICIOS ==========*/
 .servicios {
-    padding-top: 100px;
+    padding: 100px 0;
+    background-color: #F5F5F5;
+    z-index: 1;
+    position: relative;
 }
 .servicio {
     width: 100%;
@@ -274,6 +307,22 @@ h2 span {
     .servicios h2 {
         font-size: 30px;
     }
+    .servicios .swiper-button-prev,
+    .servicios .swiper-button-next {
+        border: 2px solid #1075a9;
+    }
+    .servicios .swiper-button-prev::after,
+    .servicios .swiper-button-next::after {
+        color: #1075a9;
+    }
+    .servicios .swiper-pagination {
+        display: none;
+    }
+}
+@media (max-width: 420px) {
+    .servicio {
+        max-width: 260px;
+    }
 }
 
 
@@ -282,8 +331,10 @@ h2 span {
 
 /*========== NOSOTROS ==========*/
 .nosotros {
-    margin-top: 100px;
+    padding: 100px 0;
     background-color: #ededec;
+    z-index: 1;
+    position: relative;
 }
 .nosotros .mapa {
     max-width: 100%;
@@ -305,7 +356,7 @@ h2 span {
 .nosotros p {
     font-family: 'Raleway', sans-serif;
 }
-.nosotros button {
+.nosotros a {
     background-color: #117AB0;
     color: #fff;
     font-size: 14px;
@@ -317,11 +368,26 @@ h2 span {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
     transition-duration: .3s;
 }
-.nosotros button:hover {
+.nosotros a:hover {
     background-color: #FD8307;
 }
+
+.nosotros a .no_hover {
+    display: block;
+}
+.nosotros a:hover .no_hover {
+    display: none;
+}
+.nosotros a .hover {
+    display: none;
+}
+.nosotros a:hover .hover {
+    display: block;
+}
+
 @media (max-width: 768px) {
     .nosotros {
         background-color: #fff;
@@ -337,7 +403,10 @@ h2 span {
 
 /*========== ¿CÓMO FUNCIONA? ==========*/
 .funcionamiento {
-    padding-top: 100px;
+    padding: 100px 0;
+    background-color: #F5F5F5;
+    z-index: 1;
+    position: relative;
 }
 .funcion {
     border-radius: 4px;
@@ -381,7 +450,6 @@ h2 span {
     bottom: 10px;
     height: 60px;
 }
-
 @media (min-width: 1300px) {
     .swiper-button-prev,
     .swiper-button-next {
@@ -391,6 +459,29 @@ h2 span {
 @media (max-width: 768px) {
     .funcionamiento h2 {
         font-size: 30px;
+        justify-content: center;
+    }
+    .funcionamiento h2 img {
+        display: none;
+    }
+    .funcionamiento .swiper-button-prev,
+    .funcionamiento .swiper-button-next {
+        border: 2px solid #1075a9;
+    }
+    .funcionamiento .swiper-button-prev::after,
+    .funcionamiento .swiper-button-next::after {
+        color: #1075a9;
+    }
+}
+@media (max-width: 420px) {
+    .funcion {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 768px) {
+    .funcionamiento .swiper-pagination {
+        display: none;
     }
 }
 
@@ -402,6 +493,9 @@ h2 span {
 .contacto {
     padding-bottom: 100px;
     text-align: center;
+    background-color: #F5F5F5;
+    z-index: 1;
+    position: relative;
 }
 .contacto h2 {
     justify-content: center;
@@ -413,7 +507,7 @@ h2 span {
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
 }
-.contacto button {
+.contacto a {
     background-color: #117AB0;
     color: #fff;
     font-size: 14px;
@@ -424,8 +518,13 @@ h2 span {
     border-radius: 4px;
     width: 220px;
     transition-duration: .3s;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
-.contacto button:hover {
+.contacto a:hover {
     background-color: #FD8307;
 }
 @media (max-width: 768px) {
@@ -440,8 +539,10 @@ h2 span {
 
 /*========== TESTIMONIOS ==========*/
 .testimonios {
-    padding-top: 100px;
-    margin-bottom: 100px;
+    padding: 100px 0;
+    background-color: #F5F5F5;
+    z-index: 1;
+    position: relative;
 }
 .testimonios h2 {
     justify-content: center;
@@ -550,7 +651,11 @@ h2 span {
 .testimonios .swiper-button-next::after {
     color: #1075a9;
 }
-@media (max-width: 768px) {
+.testimonios .slider-boxes .swiper-button-prev,
+.testimonios .slider-boxes .swiper-button-next {
+    display: none;
+}
+@media (max-width: 767px) {
     .testimonios h2 span {
         font-size: 30px;
     }
@@ -563,6 +668,15 @@ h2 span {
         left: inherit;
         right: 0;
     }
+    .testimonios .slider-boxes .swiper-button-prev,
+    .testimonios .slider-boxes .swiper-button-next {
+        display: flex;
+    }
+}
+@media (max-width: 420px) {
+    .testimonios .testimonio {
+        max-width: 260px !important;
+    }
 }
 
 
@@ -571,8 +685,10 @@ h2 span {
 
 /*========== CONTACTANOS ==========*/
 .contactanos {
-    margin-top: 100px;
     color: #fff;
+    background-color: #002E5D;
+    z-index: 1;
+    position: relative;
 }
 .contactanos .simbol {
     position: absolute;
@@ -657,9 +773,6 @@ h2 span {
     color: #fff;
     text-decoration: none;
 }
-.contactanos ul li span {
-    
-}
 .contactanos ul li img {
     width: 20px;
     height: 20px;
@@ -682,6 +795,8 @@ h2 span {
 .footer {
     background-color: #0B1C2E;
     color: #fff;
+    z-index: 1;
+    position: relative;
 }
 .footer a,
 .footer h6 {
@@ -692,6 +807,10 @@ h2 span {
     font-weight: 600;
     margin: 0 6px; 
     font-family: 'Raleway', sans-serif;
+    transition-duration: .3s;
+}
+.footer a:hover {
+    color: #FD8307;
 }
 .footer .sub {
     background-color: #04101D;
@@ -699,6 +818,35 @@ h2 span {
     font-size: 12px;
     padding: 10px 0;
     font-weight: 100;
+}
+
+
+.footer .rrss img {
+    height: 20px;
+    filter: brightness(10) saturate(0%);
+    transition-duration: .3s;
+}
+.footer .rrss a {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .3s;
+}
+.footer .rrss a:hover img {
+    filter: inherit;
+}
+.footer .rrss a:hover {
+    background-color: #fff;
+    border-radius: 100%;
+}
+
+
+@media (max-width: 1100px) {
+    .footer .logo {
+        max-width: 200px;
+    }
 }
 
 

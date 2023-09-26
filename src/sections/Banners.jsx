@@ -42,13 +42,12 @@ const Banners = () => {
         
         <>
 
+            <div id='home'></div>
+
             <div className="banners">
 
                 <Swiper
                     modules={[Navigation, Pagination, A11y, Autoplay]}
-                    autoplay={{
-                        delay: 3000
-                    }}
                     spaceBetween={0}
                     slidesPerView={1}
                     navigation

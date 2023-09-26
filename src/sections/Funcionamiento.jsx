@@ -53,59 +53,65 @@ const Funcionamiento = () => {
   
         <>
         
-            <div id='funcionamiento' className="funcionamiento container my-5">
+            <div id='funcionamiento' className="funcionamiento">
 
-                <h2>
-                    <img src="simbol.svg" alt="simbol" />
-                    ¿Cómo <span> funciona?</span>
-                </h2>
+                <div className="container">
 
-                <div className='mt-5'>
-                    
-                    <Swiper
-                        modules={[Navigation, Pagination, A11y, Autoplay]}
-                        spaceBetween={10}
-                        autoplay={{
-                            delay: 3000
-                        }}
-                        navigation
-                        pagination={{ clickable: true }}
-                        breakpoints={{
-                            0: {
-                                slidesPerView: 1
-                            },
-                            768: {
-                              slidesPerView: 2
-                            },
-                            1024: {
-                              slidesPerView: 3
-                            },
-                            1200: {
-                              slidesPerView: 4
-                            },
-                            1300: {
-                                slidesPerView: 5
-                            }
-                        }}>
+                    <h2>
+                        <img src="simbol.svg" alt="simbol" />
+                        ¿Cómo <span> funciona?</span>
+                    </h2>
+
+                    <div className='mt-5'>
                         
-                        {funciones.map( ( funcion, index ) => (
-
-                            <SwiperSlide key={index}>
-                                <Funcion number={ funcion.number } name={ funcion.name } description={ funcion.description } color={ funcion.color } />
-                            </SwiperSlide>
-
-                        ))}
+                        <Swiper
+                            modules={[Navigation, Pagination, A11y, Autoplay]}
+                            spaceBetween={10}
+                            autoplay={{
+                                delay: 3000
+                            }}
+                            navigation
+                            pagination={{ clickable: true }}
+                            breakpoints={{
+                                0: {
+                                    slidesPerView: 1
+                                },
+                                768: {
+                                slidesPerView: 2
+                                },
+                                1024: {
+                                slidesPerView: 3
+                                },
+                                1200: {
+                                slidesPerView: 4
+                                },
+                                1300: {
+                                    slidesPerView: 5
+                                }
+                            }}>
                             
-                    </Swiper>
-                
+                            {funciones.map( ( funcion, index ) => (
+
+                                <SwiperSlide key={index}>
+                                    <Funcion number={ funcion.number } name={ funcion.name } description={ funcion.description } color={ funcion.color } />
+                                </SwiperSlide>
+
+                            ))}
+                                
+                        </Swiper>
+                    
+                    </div>
+
                 </div>
 
             </div>
 
-            <div className="contacto container">
-                <h2><span>¡Comienza a mejorar ahora!</span></h2>
-                <p>Contáctanos para descubrir cómo podemos ayudarte en tus metas.</p>
-                <button>¡Contáctanos hoy mismo!</button>
+            <div className="contacto">
+                <div className="container">
+                    <h2><span>¡Comienza a mejorar ahora!</span></h2>
+                    <p>Contáctanos para descubrir cómo podemos ayudarte en tus metas.</p>
+                    <a href="#contactanos">¡Contáctanos hoy mismo!</a>
+                </div>
             </div>
 
         </>

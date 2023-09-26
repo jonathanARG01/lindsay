@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form } from 'react-bootstrap';
+import Formulario from '../components/Formulario';
 
 
 
@@ -18,37 +18,7 @@ const Contactanos = () => {
                     <h2 className="text-white">contáctanos</h2>
                     <p>Escríbenos  para descubrir cómo podemos ayudarte en tus metas.</p>
                     
-                    <form>
-
-                        <div className="mb-4">
-                            <label className="form-label">
-                                <img src="icon-user.svg" alt="icon"/>
-                                Nombre
-                            </label>
-                            <input type="text" className="form-control" id="inputNombre" placeholder="name@example.com"></input>
-                        </div>
-
-                        <div className="mb-4">
-                            <label className="form-label">
-                                <img src="icon-email.svg" alt="icon"/>
-                                Correo Electrónico
-                                </label>
-                            <input type="email" className="form-control" id="inputEmail" placeholder="Ej: correo@electronico.com"></input>
-                        </div>
-                        
-                        <div className="mb-4">
-                            <label className="form-label">
-                                <img src="icon-pencil.svg" alt="icon"/>
-                                Mensaje
-                            </label>
-                            <textarea className="form-control" id="inputMensaje" rows="3" placeholder='Escribe aquí tu mensaje'></textarea>
-                        </div>
-
-                        <div className="text-center">
-                            <button className='btn'>¡Contáctanos hoy mismo!</button>
-                        </div>
-
-                    </form>
+                    <Formulario />
 
                 </div>
 
