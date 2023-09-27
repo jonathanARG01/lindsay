@@ -752,6 +752,10 @@ h2 span {
 .contactanos form {
     margin-top: 40px;
 }
+.contactanos form .error {
+    color: red;
+    font-size: 12px;
+}
 .contactanos iframe {
     width: 100%;
     height: 100%;
