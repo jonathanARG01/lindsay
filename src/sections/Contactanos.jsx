@@ -35,7 +35,7 @@ const Contactanos = () => {
                             <ul>
                                 <li>
                                     <img src="icon-pin.svg" alt="icon" />
-                                    <span>Agustinas N°853, oficina 441 Santiago, Chile</span>
+                                    <span>Apoquindo 5555 oficina 1301. Las Condes, Santiago</span>
                                 </li>
                                 <li>
                                     <img src="icon-mail.svg" alt="icon" />

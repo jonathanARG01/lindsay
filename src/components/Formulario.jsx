@@ -4,10 +4,6 @@ import { useForm } from 'react-hook-form';
 
 const Formulario = () => {
     
-    // register: Registrar y vincular campos al formulario
-    // formState: Estados del formulario (errores)
-    // handleSubmit: Metodo cuando se envia el formulario
-
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const onSubmit = ( data ) => {

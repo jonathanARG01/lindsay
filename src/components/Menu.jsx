@@ -18,7 +18,7 @@ const Menu = () => {
                         </a>
                     </Navbar.Brand>
 
-                    <img src="morison.svg" alt="Morison" />
+                    <img src="morison.svg" alt="Morison" style={{ height: 40, marginLeft: 10 }} />
 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     

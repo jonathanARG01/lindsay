@@ -110,6 +110,17 @@ h2 span {
         display: none !important;
     }
 }
+@media (max-width: 768px) {
+    .navbar .container {
+        justify-content: center;
+    }
+}
+@media (max-width: 420px) {
+    .navbar img {
+        max-width: 120px;
+    }
+}
+
 
 
 
@@ -256,6 +267,10 @@ h2 span {
     }
     .banners .banner-item h4 {
         display: inherit;
+        font-size: 22px;
+    }
+    .banners .banner-item p {
+        font-size: 16px;
     }
     .banners .swiper-button-prev,
     .banners .swiper-button-next {
@@ -852,6 +867,7 @@ h2 span {
         max-width: 200px;
     }
 }
+
 
 
 
